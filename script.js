@@ -295,15 +295,9 @@ function searchStation() {
         return;
     }
     
-    if (results.length === 1) {
-        // 只有一个结果，直接跳转
-        console.log('直接跳转到站点:', results[0].name);
-        goToStationPage(results[0], 'search');
-    } else {
-        // 多个结果，显示选择模态框
-        console.log('显示多个结果选择框');
-        showSearchResultsModal(results);
-    }
+    // 直接跳转到第一个结果
+    console.log('直接跳转到站点:', results[0].name);
+    goToStationPage(results[0], 'search');
 }
 
 function showSearchResultsModal(results) {
