@@ -963,18 +963,16 @@ header h1 {
     
     /* 移动端导航按钮位置优化 */
     .navigation-buttons {
-        position: fixed;
-        top: 1rem;
-        right: 1rem;
-        z-index: 100;
-        background: rgba(255,255,255,0.1);
-        backdrop-filter: blur(10px);
-        border-radius: 15px;
-        padding: 0.5rem 1rem;
-        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-        border: 1px solid rgba(255,255,255,0.2);
+        position: relative;
+        order: 0 !important;
+        margin: 0.2rem 0;
+        background: transparent;
+        border: none;
+        box-shadow: none;
         display: flex;
         gap: 0.5rem;
+        justify-content: center;
+        padding: 0.1rem 0;
     }
     
     #station-name {
