@@ -878,14 +878,14 @@ header h1 {
 }
 
 .author-footer a {
-    color: #667eea;
+    color: #ffffff;
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s ease;
 }
 
 .author-footer a:hover {
-    color: #5a67d8;
+    color: #f0f0f0;
     text-decoration: underline;
 }
 
@@ -898,7 +898,7 @@ header h1 {
     }
     
     header {
-        padding: 1.5rem 0 1rem;
+        padding: 1rem 0 0.5rem;
     }
     
     header h1 {
@@ -961,12 +961,28 @@ header h1 {
         order: 1;
     }
     
+    /* 移动端导航按钮位置优化 */
+    .navigation-buttons {
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        z-index: 100;
+        background: rgba(255,255,255,0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        padding: 0.5rem 1rem;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        border: 1px solid rgba(255,255,255,0.2);
+        display: flex;
+        gap: 0.5rem;
+    }
+    
     #station-name {
         font-size: 1.6rem;
     }
     
     .station-header {
-        text-align: left;
+        text-align: center;
         gap: 0.4rem;
         margin-bottom: 0.8rem;
     }
@@ -991,7 +1007,7 @@ header h1 {
     }
     
     .map-container {
-        order: 2;
+        order: 3;
         min-height: 400px;
         max-height: 500px;
         padding: 0.3rem;
