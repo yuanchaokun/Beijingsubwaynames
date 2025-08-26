@@ -92,17 +92,13 @@ function setupNavigationButtons() {
     const nextText = document.getElementById('next-text');
     
     if (currentMode === 'random') {
-        // 随机模式
-        prevText.textContent = '再来一个';
-        nextText.textContent = '选择其他';
-        
-        prevBtn.addEventListener('click', () => {
-            const randomStation = getRandomStation();
-            goToStation(randomStation, 'random');
-        });
+        // 随机模式 - 只显示一个按钮
+        prevBtn.style.display = 'none';
+        nextText.textContent = '再来一个';
         
         nextBtn.addEventListener('click', () => {
-            window.location.href = 'index.html';
+            const randomStation = getRandomStation();
+            goToStation(randomStation, 'random');
         });
         
     } else if (currentMode === 'line' && currentLine) {
