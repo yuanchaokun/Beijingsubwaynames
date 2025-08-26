@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>北京地铁站名探索</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>北京地铁站名探索</h1>
+            <p class="subtitle">探寻每个站名背后的历史故事</p>
+            <p class="station-count">目前收录300+个地铁站名</p>
+        </header>
+
+        <main class="homepage">
+            <div class="options-grid">
+                <div class="option-card" id="random-station">
+                    <div class="option-icon">🎲</div>
+                    <h2>随机站点</h2>
+                    <p>发现一个随机的地铁站故事</p>
+                </div>
+
+                <div class="option-card" id="select-line">
+                    <div class="option-icon">🚇</div>
+                    <h2>选择线路</h2>
+                    <p>按线路浏览地铁站历史</p>
+                </div>
+
+                        <div class="option-card" id="search-station">
+            <div class="option-icon">🔍</div>
+            <h2>搜索站点</h2>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="输入站名..." class="search-input">
+                <button onclick="searchStation()" class="search-btn">搜索</button>
+            </div>
+        </div>
+            </div>
+
+            <!-- 线路选择模态框 -->
+            <div class="modal" id="line-modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h3>选择地铁线路</h3>
+                    <div class="line-list" id="line-list">
+                        <!-- 线路列表将通过JavaScript动态生成 -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- 搜索模态框 -->
+            <div class="modal" id="search-modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h3>搜索地铁站</h3>
+                    <div class="search-box">
+                        <input type="text" id="search-input" placeholder="输入站点名称...">
+                        <button id="search-btn">搜索</button>
+                    </div>
+                    <div class="search-results" id="search-results">
+                        <!-- 搜索结果将显示在这里 -->
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <!-- 作者链接 -->
+        <footer class="author-footer">
+            <p>made by <a href="https://baidou.work" target="_blank" rel="noopener">baidou</a></p>
+        </footer>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">站点详情 - 北京地铁站名探索</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-nav">
+                <button class="back-btn" onclick="window.location.href='index.html'">← 返回</button>
+                <h1>北京地铁站名探索</h1>
+            </div>
+        </header>
+
+        <main class="station-page">
+            <div class="content-wrapper">
+                <!-- 左侧：站点信息 -->
+                <div class="station-info">
+                                    <div class="station-header">
+                    <h2 id="station-name">站点名称</h2>
+                    <div class="line-badges" id="line-badges">
+                        <!-- 线路标识将通过JavaScript动态生成 -->
+                    </div>
+                </div>
+
+                    <div class="station-content">
+                        <div class="info-section">
+                            <h3>站名来源</h3>
+                            <p id="station-origin" class="station-text">站名来源信息...</p>
+                        </div>
+
+                        <div class="info-section">
+                            <h3>历史故事</h3>
+                            <p id="station-history" class="station-text">历史故事信息...</p>
+                        </div>
+                        
+
+                    </div>
+                </div>
+
+                <!-- 右侧：地图区域 -->
+                <div class="map-container">
+                    <div class="map-controls">
+                        <button class="map-control-btn" id="zoom-in">+</button>
+                        <button class="map-control-btn" id="zoom-out">-</button>
+                    </div>
+                    <div class="svg-map-wrapper">
+                        <div id="svg-map-container">
+                            <!-- SVG地图将通过JavaScript加载 -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 导航按钮 -->
+            <div class="navigation-buttons">
+                <button class="nav-btn" id="prev-btn">
+                    <span id="prev-text">再来一个</span>
+                </button>
+                <button class="nav-btn" id="next-btn">
+                    <span id="next-text">选择其他</span>
+                </button>
+            </div>
+        </main>
+        
+        <!-- 作者链接 -->
+        <footer class="author-footer">
+            <p>made by <a href="https://baidou.work" target="_blank" rel="noopener">baidou</a> | 站名致谢《北京地铁站名掌故》 | By Ran and Hat600, <a href="https://commons.wikimedia.org/w/index.php?curid=6118427" target="_blank" rel="noopener">CC BY-SA 3.0</a></p>
+        </footer>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="svg-parser.js"></script>
+    <script src="station.js"></script>
+</body>
+</html>
